@@ -44,7 +44,6 @@
 						<small>Created by <a href="http://www.toddqualls.com">Todd E. Qualls</a> / <a href="http://twitter.com/teqknowledgy">@teqknowledgy</a></small>
 					</p>
 				</section>
-
 			    <section>
 			        <section>
 			            <h2>What is Git, Anyway?</h2>
@@ -54,10 +53,16 @@
 			                </p>
 			                <footer>
 			                    <cite>
-			                        <a href="http://git-scm.com">-- git-scm.com</a>
+			                        <a href="http://git-scm.com">-- git-scm.com</a><br />
+			                        (If you don't know Git from <a href="http://en.wiktionary.org/wiki/know_shit_from_Shinola">Shinola</a>, 
+			                        <a href="http://git-scm.com">git-scm.com</a> is a fantastic place to start.)
 			                    </cite>
 			                </footer>
 			            </blockquote>
+			        </section>
+			        <section>
+			            <h2>For Example:</h2>
+                        <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">Version Control Systems</a>
 			        </section>
 			        <section>
 			            <h2>Unofficially</h2>
@@ -93,27 +98,50 @@
 			    <section>
                     <section>
                         <h2>A basic git workflow</h2>
-                        <p>Though there are many GUI tools available, we are focusing on the command line.</p>
+                        <p>Though there are many GUI tools available, but we are focusing on the command line.</p>
                         <p>On Windows, the most common CLI for using Git is called git-bash.</p>
                     </section>
-			        <section>
-                        <pre><code class="fragment">
+                    <section>
+                        <div class="fragment">
+                            <h3>View what files have changes and/or which are staged (optional)</h3>
+                            <pre><code>
 $ git status
-                    </code></pre>
-                        <pre><code class="fragment">
+                            </code></pre>
+                        </div>
+                        <div class="fragment">
+                            <h3>Specify which files you want to include in your "commit" (in this case, all new, changed, and deleted files)</h3>
+                            <pre><code>
 $ git add --all
-                    </code></pre>
-                        <pre><code class="fragment">
-$ git commit 'This commit adds happy little trees all over the internets.'
-                    </code></pre>
-                        <pre><code class="fragment">
-$ git pull origin master
-                    </code></pre>
-                        <p class="fragment">(Fix any merge conflicts that resulted from the pull from the remote known as "origin.")</p>
-                        <pre><code class="fragment">
-$ git push origin master
-                    </code></pre>
+                            </code></pre>
+                        </div>
                     </section>
+			        <section>
+			            <div class="fragment">
+                            <h3>Commit your staged files from the current branch (master) to your local repository with a descriptive message</h3>
+			                <pre><code>
+$ git commit -m 'This commit adds happy little trees all over the internets.'
+                        </code></pre>
+			            </div>
+
+			            <div class="fragment">
+                            <h3>Retrieve the most recent changes that may have been pushed to the remote repository by others</h3>
+			                <pre><code>
+$ git pull origin master
+                        </code></pre>
+			            </div>
+                        <p class="fragment">(Fix any merge conflicts that resulted from the pull from the remote known as "origin" using a tool like <a href="http://kdiff3.sourceforge.net/">KDiff3</a>)</p>
+			        </section>
+			        <section>
+			            <div class="fragment">
+                            <h3>Commit your changes to the branch (master) to the remote repository (origin)</h3>
+			                <pre><code>
+$ git push origin master
+                        </code></pre>
+			            </div>
+			        </section>
+                        
+                        
+			       
                     
 			    </section>
 
